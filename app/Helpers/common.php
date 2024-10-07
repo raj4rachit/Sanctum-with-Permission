@@ -103,4 +103,12 @@ if (!function_exists('checkPermissions')) {
     }
 }
 
+if(!function_exists('createUsernameFromEmail')){
+    function createUsernameFromEmail(string $email)
+    {
+        $username = strstr($email, '@', true);
+        return $username;
+    }
+}
+
 
